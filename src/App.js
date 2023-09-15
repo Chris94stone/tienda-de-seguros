@@ -1,5 +1,6 @@
+import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import NavBar from './src/component/NavBar'; // Importa NavBar.jsx desde la carpeta 'component'
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        TIENDA DE SEGUROS       
+          TIENDA DE SEGUROS
         </p>
         <a
           className="App-link"
@@ -18,8 +19,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <NavBar /> {/* Agrega el componente NavBar aquí */}
     </div>
   );
 }
 
 export default App;
+
