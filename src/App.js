@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import NavBar from './NavBar.jsx'; // Importa NavBar.jsx desde la carpeta 'component'
+import NavBar from './component/NavBar/NavBar'; // Asegúrate de que la ruta sea correcta
+import CartWidget from './component/CartWidget/CartWidget'; // Asegúrate de que la ruta sea correcta
 
 function App() {
   return (
@@ -20,9 +21,12 @@ function App() {
         </a>
       </header>
       <NavBar /> {/* Agrega el componente NavBar aquí */}
+      <CartWidget /> {/* Agrega el componente CartWidget aquí */}
     </div>
   );
 }
 
 export default App;
+
+
 
