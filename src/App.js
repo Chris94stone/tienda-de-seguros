@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import NavBar from './src/component/NavBar'; // Importa NavBar.jsx desde la carpeta 'component'
+import NavBar from './NavBar.jsx'; // Importa NavBar.jsx desde la carpeta 'component'
 
 function App() {
   return (
