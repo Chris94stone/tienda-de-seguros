@@ -1,28 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import NavBar from './src/component/NavBar'; // Importa NavBar.jsx desde la carpeta 'component'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          TIENDA DE SEGUROS
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <NavBar /> {/* Agrega el componente NavBar aquí */}
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={ItemListContainer} />
+          <Route path="/category/:id" exact component={ItemListContainer} />
+          <Route path="/item/:id" exact component={ItemDetailContainer} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
 
